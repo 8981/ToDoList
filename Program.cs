@@ -1,8 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using ToDoList.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddDbContext<ToDoContext>(options => options.UseSqlServer
+(builder.Configuration.GetConnectionString("ToDoContext")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,6 +26,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=ToDO}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
