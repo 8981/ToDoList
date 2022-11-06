@@ -31,6 +31,7 @@ namespace ToDoList
                     {
                         int doNumber = int.Parse(inputLine.Split
                         (new[] {"Do #"}, StringSplitOptions.None)[1]);
+                        app.Do(doNumber);
                     }
                     catch(FormatException)
                     {
