@@ -1,4 +1,4 @@
-# ToDoList
+# ToDoList.CLI
 >Console app created in C#
 
 All todo tasks stored locally in a file between runs.
