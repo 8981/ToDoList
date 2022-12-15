@@ -1,11 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ToDoList.API;
 using ToDoList.Models;
 
 namespace ToDoList.API.Controllers
@@ -20,6 +14,7 @@ namespace ToDoList.API.Controllers
         {
             _context = context;
         }
+        
 
         // GET: api/TodoItems
         [HttpGet]

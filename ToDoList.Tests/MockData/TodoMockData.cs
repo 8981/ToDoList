@@ -1,7 +1,7 @@
 using ToDoList.Models;
 namespace ToDoList.Tests;
 
-public class TodoMockData
+public class TodoMockData 
 {
     public static List<TodoItem> GetToDoItems()
     {

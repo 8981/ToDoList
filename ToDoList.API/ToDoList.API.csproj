@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ToDoList.Models\ToDoList.Models.csproj" />
-    <ProjectReference Include="..\ToDoList.Tests\ToDoList.Tests.csproj" />
   </ItemGroup>
 
 </Project>
