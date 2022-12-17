@@ -16,7 +16,7 @@ namespace ToDoList.API.Controllers
         }
         
 
-        // GET: api/TodoItems
+        // GET
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
@@ -27,7 +27,7 @@ namespace ToDoList.API.Controllers
             return await _context.TodoItems.ToListAsync();
         }
 
-        // GET: api/TodoItems/5
+        // GET
         [HttpGet("{id}")]
         public async Task<ActionResult<TodoItem>> GetTodoItem(int id)
         {
@@ -45,8 +45,7 @@ namespace ToDoList.API.Controllers
             return todoItem;
         }
 
-        // PUT: api/TodoItems/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // PUT
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodoItem(int id, TodoItem todoItem)
         {
@@ -76,8 +75,7 @@ namespace ToDoList.API.Controllers
             return NoContent();
         }
 
-        // POST: api/TodoItems
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        // POST
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
         {
@@ -91,7 +89,7 @@ namespace ToDoList.API.Controllers
             return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
         }
 
-        // DELETE: api/TodoItems/5
+        // DELETE
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(int id)
         {
